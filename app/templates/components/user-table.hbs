@@ -1,0 +1,46 @@
+<table>
+    <thead>
+       <tr>
+           <td>SI.No</td>
+           <td>First Name</td>
+           <td>Last Name</td>
+           <td>City</td>
+           <td>Department</td>
+           <td>Job Title</td>
+           <td>Authentication Emails</td>
+           <td>Authentication Phone Numbers</td>
+           <td>Company Name</td>
+           <td>Country</td>
+           <td>State</td>
+           <td>Postal Code</td>
+           <td>Is Admin</td>
+           <td>Is Guest User</td>
+           <td>Fax Number</td>
+           <td>Signin Status</td>
+    
+       </tr>
+    </thead>
+    <tbody>
+        {{#each data as |user index| }}
+          <tr>
+              <td>{{index}}</td>
+              <td>{{user.firstName}}</td>
+              <td>{{user.lastName}}</td>
+              <td>{{user.city}}</td>
+              <td>{{user.department}}</td>
+              <td>{{user.jobTitle}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.phoneNumber}}</td>
+              <td>{{user.companyName}}</td>
+              <td>{{user.country}}</td>
+              <td>{{user.state}}</td>
+              <td>{{user.postalCode}}</td>
+              <td>{{user.isAdmin}}</td>
+              <td>{{user.isGuestUser}}</td>
+              <td>{{user.faxNumber}}</td>
+              <td>{{user.signinStatus}}</td>
+          </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{yield}}

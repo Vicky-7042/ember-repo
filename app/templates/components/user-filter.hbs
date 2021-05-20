@@ -1,0 +1,60 @@
+
+<div class="power-select">
+{{#power-select
+  selected=columnValue
+  options=columnList
+  allowClear=true
+  onchange=(action "onSelectColumn")
+  placeholder="Select Column"
+  horizontalPostion="center"
+  as |column|
+}}
+  {{column}}
+{{/power-select}}
+</div>
+
+
+<div class="power-select">
+{{#power-select
+  selected=filterValue
+  options=filterList
+  allowClear=true
+  horizontalPostion="center"
+  onchange=(action "onSelectFilter")
+  placeholder="Select filter"
+  as |filter|
+}}
+  {{filter}}
+{{/power-select}}
+</div>
+
+
+<div class="column-list">
+{{!-- {{#each columnList as |item|}}
+  <button class="column-value" {{action "onSelectColumn" item}}>{{item}}</button>
+  <div class="user-list">
+{{#if isColumnSelected}} --}}
+  {{#unless isFilterNull}}
+  <div class="power-select">
+{{#power-select
+  selected=userValue
+  options=userList
+  allowClear=true
+  onopen=(action "onUserValue")
+  horizontalPostion="center"
+  onchange=(action "onSelectValue")
+  placeholder="Select Value"
+  as |value|
+}}
+  {{value}}
+{{/power-select}}
+</div>
+{{/unless}}
+{{!-- {{/if}}
+</div>
+{{/each}} --}}
+
+</div>
+
+<button {{action "clearColumn"}}>clear</button>
+{{yield}}

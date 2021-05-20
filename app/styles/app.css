@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    font-size: medium;
+    background-color: rgb(241, 177, 209);
+    box-sizing: border-box;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+td{
+    border: 1px solid black;
+    padding: 0 3px;
+}
+
+.user-data{
+    display: flex;
+}
+
+.power-select {
+    width: 100%;
+}
+
+.filter {
+    width: 200px;
+    margin: 10px 10px;
+}
+
+.table{
+    margin: 10px 10px;
+    overflow: auto;
+}
+
+button{
+        height: 25px;
+        width: auto;
+        margin: 10px 0;
+}
+
+.null-count{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.column-list{
+    background-color: white;
+    border-collapse: collapse;
+    display: grid;
+}
+
+.column-list button:hover{
+    background-color: blueviolet;
+}
+
+.user-list{
+    z-index: 10;
+    position: absolute;
+    left: 200px;
+    
+}

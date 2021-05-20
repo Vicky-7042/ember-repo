@@ -1,0 +1,32 @@
+<div class="user-data">
+{{user-filter setFilterData=(action setFilterData) setFilter=(action setFilter) setFilterValue=(action setFilterValue) }}
+{{user-table data=(if isFilter filteredData model)}}
+</div>
+<div> 
+    <button class="button" {{action "getNullCount"}}>Insights</button>
+    {{#if toShowNullCount}}
+  <table class="null-count">
+      <thead>
+          <tr>
+              <td>Column</td>
+              <td>Null Count</td>
+          </tr>
+      </thead>
+      <tbody>
+        {{#each nullCount as |item|}}
+        <tr>
+            <td>
+                {{item.column}}
+            </td>
+            <td>
+                {{item.count}}
+            </td>
+        </tr>    
+        {{/each}}
+      </tbody>
+  </table>
+  <button{{action "clear"}}>Clear</button>
+{{/if}}
+</div>
+
+{{outlet}}
